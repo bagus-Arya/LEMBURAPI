@@ -232,4 +232,6 @@ return [
 
     ],
 
+    'DB' => Illuminate\Support\Facades\DB::class,
+
 ];
