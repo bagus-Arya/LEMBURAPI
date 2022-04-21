@@ -17,6 +17,7 @@ class CreateSettings extends Migration
             $table->string('key', 30);
             $table->integer('value', 10);
             $table->float('expression', 50, 2);
+            $table->timestamps();
         });
     }
 

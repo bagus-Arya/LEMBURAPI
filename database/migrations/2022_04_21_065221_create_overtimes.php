@@ -21,6 +21,7 @@ class CreateOvertimes extends Migration
             $table->dateTime('time_ended');
             $table->foreign('employee_id')->references('id')->on('employees')
                     ->onDelete('CASCADE');
+            $table->timestamps();
         });
     }
 

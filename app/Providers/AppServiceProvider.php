@@ -2,7 +2,14 @@
 
 namespace App\Providers;
 
+use App\Contracts\LemburRepositoryInterface;
+
+use App\Repositories\LemburRepository;
+
 use Illuminate\Support\ServiceProvider;
+use DB;
+use Illuminate\Pagination\Paginator;
+use Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(LemburRepositoryInterface::class,LemburRepository::class);
     }
 
     /**
@@ -23,6 +30,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Paginator::useBootstrap();
     }
 }

@@ -18,6 +18,7 @@ class CreateReferences extends Migration
             $table->string('code');
             $table->string('name');
             $table->float('expression', 50, 2)->default(0.0);
+            $table->timestamps();
         });
     }
 

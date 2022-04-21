@@ -16,8 +16,9 @@ class CreateEmployees extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 30);
-            $table->tinyInteger('status_id')->default(0);
-            $table->float('salary', 15, 2);
+            $table->integer('status_id');
+            $table->integer('salary');
+            $table->timestamps();
         });
     }
 
